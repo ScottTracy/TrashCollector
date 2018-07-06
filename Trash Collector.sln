@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trash Collector", "Trash Collector\Trash Collector.csproj", "{9C06188A-0F47-42E2-A1FD-C30F2FF0B23A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trash Collector.Tests", "Trash Collector.Tests\Trash Collector.Tests.csproj", "{EBA1C978-B590-48F2-8B46-A91D94D32A11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C06188A-0F47-42E2-A1FD-C30F2FF0B23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C06188A-0F47-42E2-A1FD-C30F2FF0B23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C06188A-0F47-42E2-A1FD-C30F2FF0B23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C06188A-0F47-42E2-A1FD-C30F2FF0B23A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA1C978-B590-48F2-8B46-A91D94D32A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA1C978-B590-48F2-8B46-A91D94D32A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA1C978-B590-48F2-8B46-A91D94D32A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA1C978-B590-48F2-8B46-A91D94D32A11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EA363FD-D4F3-4AE8-A2E6-76DFDAE777AF}
+	EndGlobalSection
+EndGlobal
