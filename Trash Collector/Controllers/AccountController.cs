@@ -54,13 +54,7 @@ namespace Trash_Collector.Controllers
                 _userManager = value;
             }
         }
-        // GET: /Account/Register   
-        [AllowAnonymous]
-        public ActionResult Register()
-        {
-            ViewBag.Name = new SelectList(context.Roles.ToList(), "Name", "Name");
-            return View();
-        }
+        
 
         //
         // GET: /Account/Login
@@ -144,7 +138,13 @@ namespace Trash_Collector.Controllers
             }
         }
 
-       
+        // GET: /Account/Register   
+        [AllowAnonymous]
+        public ActionResult Register()
+        {
+            ViewBag.Name = new SelectList(context.Roles.ToList(), "Name", "Name");
+            return View();
+        }
 
         //
         // POST: /Account/Register
@@ -155,10 +155,12 @@ namespace Trash_Collector.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser {  UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    
+                    
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
