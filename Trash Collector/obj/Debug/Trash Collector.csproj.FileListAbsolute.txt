@@ -120,5 +120,5 @@ c:\users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Tr
 c:\users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash Collector.csproj.CopyComplete
 c:\users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash Collector.dll
 c:\users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash Collector.pdb
-c:\users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash_Collector.Migrations.initial.resources
-c:\users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash Collector.csproj.GenerateResource.cache
+C:\Users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash_Collector.Migrations.Initial.resources
+C:\Users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash Collector.csproj.GenerateResource.cache
