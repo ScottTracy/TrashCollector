@@ -196,22 +196,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerAccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IdentityHelper.cs" />
-    <Compile Include="Migrations\201807111257535_Initial.cs" />
-    <Compile Include="Migrations\201807111257535_Initial.Designer.cs">
-      <DependentUpon>201807111257535_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807111528071_update.cs" />
-    <Compile Include="Migrations\201807111528071_update.Designer.cs">
-      <DependentUpon>201807111528071_update.cs</DependentUpon>
+    <Compile Include="Migrations\201807112018398_Initial.cs" />
+    <Compile Include="Migrations\201807112018398_Initial.Designer.cs">
+      <DependentUpon>201807112018398_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CustomerAccount.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -277,9 +275,20 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ApplicationUsers\.vs\config\applicationhost.config" />
+    <Content Include="Views\ApplicationUsers\.vs\ProjectSettings.json" />
+    <Content Include="Views\ApplicationUsers\.vs\slnx.sqlite" />
+    <Content Include="Views\ApplicationUsers\.vs\VSWorkspaceState.json" />
+    <Content Include="Views\ApplicationUsers\Create.cshtml" />
+    <Content Include="Views\ApplicationUsers\Delete.cshtml" />
+    <Content Include="Views\ApplicationUsers\Details.cshtml" />
+    <Content Include="Views\ApplicationUsers\Edit.cshtml" />
+    <Content Include="Views\ApplicationUsers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ApplicationUsers\.vs\ApplicationUsers\v15\" />
+    <Folder Include="Views\CustomerAccount\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -295,11 +304,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807111257535_Initial.resx">
-      <DependentUpon>201807111257535_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807111528071_update.resx">
-      <DependentUpon>201807111528071_update.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807112018398_Initial.resx">
+      <DependentUpon>201807112018398_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

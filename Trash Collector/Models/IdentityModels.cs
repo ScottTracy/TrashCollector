@@ -48,6 +48,7 @@ namespace Trash_Collector.Models
             return new ApplicationDbContext();
         }
 
+        public DbSet<CustomerAccount> CustomerAccounts { get; set; }
         
     }
 }
