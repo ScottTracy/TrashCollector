@@ -75,6 +75,7 @@ namespace Trash_Collector.Controllers
             return View(model);
         }
 
+
         //
         // POST: /Manage/RemoveLogin
         [HttpPost]

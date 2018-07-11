@@ -48,6 +48,6 @@ namespace Trash_Collector.Models
             return new ApplicationDbContext();
         }
 
-     
+        
     }
 }

@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Trash_Collector.Models;
 
+
 namespace Trash_Collector.Controllers
 {
     public class ApplicationUsersController : Controller
@@ -17,7 +18,7 @@ namespace Trash_Collector.Controllers
         // GET: ApplicationUsers
         public ActionResult Index()
         {
-            return View(db.ApplicationUsers.ToList());
+            return View(db.Users.ToList());
         }
 
         // GET: ApplicationUsers/Details/5
@@ -27,7 +28,7 @@ namespace Trash_Collector.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -50,7 +51,7 @@ namespace Trash_Collector.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.ApplicationUsers.Add(applicationUser);
+                db.Users.Add(applicationUser);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +66,7 @@ namespace Trash_Collector.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -96,7 +97,7 @@ namespace Trash_Collector.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -109,8 +110,8 @@ namespace Trash_Collector.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
-            db.ApplicationUsers.Remove(applicationUser);
+            ApplicationUser applicationUser = db.Users.Find(id);
+            db.Users.Remove(applicationUser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
