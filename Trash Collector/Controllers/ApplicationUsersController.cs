@@ -1,20 +1,25 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Trash_Collector.Models;
-
+using static Trash_Collector.Controllers.ManageController;
 
 namespace Trash_Collector.Controllers
 {
     public class ApplicationUsersController : Controller
     {
+        
+        private ApplicationUserManager _userManager;
         private ApplicationDbContext db = new ApplicationDbContext();
-
+          
         // GET: ApplicationUsers
         public ActionResult Index()
         {
@@ -71,6 +76,9 @@ namespace Trash_Collector.Controllers
             {
                 return HttpNotFound();
             }
+            applicationUser.HasPassword = HasPassword();
+
+
             return View(applicationUser);
         }
 
@@ -83,6 +91,7 @@ namespace Trash_Collector.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Entry(applicationUser).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -124,5 +133,28 @@ namespace Trash_Collector.Controllers
             }
             base.Dispose(disposing);
         }
+        private bool HasPassword()
+        {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            if (user != null)
+            {
+                return user.PasswordHash != null;
+            }
+            return false;
+        }
+        public ApplicationUserManager UserManager
+        {
+            get
+            {
+                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            }
+            private set
+            {
+                _userManager = value;
+            }
+        }
+        
+        
+        
     }
 }

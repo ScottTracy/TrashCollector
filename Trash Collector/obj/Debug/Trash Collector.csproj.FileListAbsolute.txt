@@ -122,3 +122,4 @@ c:\users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Tr
 C:\Users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash Collector.csprojAssemblyReference.cache
 C:\Users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash_Collector.Migrations.Initial.resources
 C:\Users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash Collector.csproj.GenerateResource.cache
+C:\Users\scott_iclhpmu\source\repos\Trash Collector\Trash Collector\obj\Debug\Trash_Collector.Migrations.update.resources

@@ -29,7 +29,7 @@ namespace Trash_Collector.Models
         public int ZipCode { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-
+        public bool HasPassword { get; set; }
         
 
         
