@@ -91,6 +91,10 @@ namespace Trash_Collector.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (applicationUser.SecurityStamp == null)
+                {
+                    applicationUser.SecurityStamp = "oops";
+                }
 
                 db.Entry(applicationUser).State = EntityState.Modified;
                 db.SaveChanges();

@@ -22,7 +22,9 @@
     @Html.HiddenFor(model => model.LockoutEnabled)
     @Html.HiddenFor(model => model.UserName)
     @Html.HiddenFor(model => model.TwoFactorEnabled)
-    
+    @Html.HiddenFor(model => model.SecurityStamp)
+
+
 
     <div class="form-group">
         @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -58,11 +60,11 @@
             [
             @if (Model.HasPassword)
             {
-            @Html.ActionLink("Change your password", "ChangePassword", "Manage")
+                @Html.ActionLink("Change your password", "ChangePassword", "Manage")
             }
             else
             {
-            @Html.ActionLink("Create", "SetPassword", "Manage")
+                @Html.ActionLink("Create", "SetPassword", "Manage")
             }
             ]
         </div>

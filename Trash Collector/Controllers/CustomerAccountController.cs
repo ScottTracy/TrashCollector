@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Trash_Collector.Models;
 
 namespace Trash_Collector.Controllers
 {
     public class CustomerAccountController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: CustomerAccount
         public ActionResult Index()
         {
@@ -15,8 +18,13 @@ namespace Trash_Collector.Controllers
         }
 
         // GET: CustomerAccount/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
             return View();
         }
 

@@ -289,6 +289,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\ApplicationUsers\.vs\ApplicationUsers\v15\" />
     <Folder Include="Views\CustomerAccount\" />
+    <Folder Include="Views\Details\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
